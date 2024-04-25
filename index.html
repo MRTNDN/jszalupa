@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo"><img src="photo.png" alt="Logo" class="logo-image"></div>
+        <div class="links">
+            <a href="#">Проекты</a>
+            <a href="#">Электроэнергия</a>
+            <a href="#">Оборудование</a>
+                <!-- Add more links as needed -->
+            </div>
+        </div>
+        <div class="content">
+        <div class="title">Контроллеры и модули System HD</div>
+        <div class="description">Программируемые модульные BACnet контроллеры автоматизации зданий</div>
+    </div>
+    <h1>Калькулятор комбинаций</h1>
+    <div>
+        <label for="inputDI">DI:</label>
+        <input type="number" id="inputDI" value="">
+    </div>
+    <div>
+        <label for="inputUI">UI:</label>
+        <input type="number" id="inputUI" value="">
+    </div>
+    <div>
+        <label for="inputDO">DO:</label>
+        <input type="number" id="inputDO" value="">
+    </div>
+    <div>
+        <label for="inputAO">AO:</label>
+        <input type="number" id="inputAO" value="">
+    </div>
+    <button id="calculate-buttoncode">найти решение</button>
+    <button id="openModalBtn">рассчитать с ценами в excel</button>
+      <div>
+        <input type="checkbox" id="checkbox1">
+        <label for="checkbox1">HD107S</label>
+    </div>
+    <div>
+        <input type="checkbox" id="checkbox2">
+        <label for="checkbox2">дополнительный порт Ethernet</label>
+       
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <!-- Кнопка для закрытия модального окна -->
+                <span class="close" id="closeModalBtn">&times;</span>
+        
+                <!-- Форма внутри модального окна -->
+                <form>
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" name="name" required>
+                    <br><br>
+        
+                    <!-- Подпись для поля "Email" -->
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <br><br>
+        
+                    <!-- Подпись для поля "Компания" -->
+                    <label for="company">Компания:</label>
+                    <input type="text" id="company" name="company" required>
+                    <br><br>
+                    <input type="button" id="calculate-button" value="Рассчитать">
+                    <input type="submit" value="Отправить">
+                </form>
+            </div>
+        </div>
+        
+    <div id="result-container"></div>
+        <div id="resultHTML"></div> <!-- Добавляем div для вывода результатов -->
+    </div>
+    <script src="code.js"></script>
+    <script src="modWindow.js"></script> <!-- Подключение правильное -->
+    <script src="code_no_price.js"></script>
+
+</body>
+</html>

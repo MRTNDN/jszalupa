@@ -1,0 +1,209 @@
+body {
+    background-image: linear-gradient(#002537, #fff);
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 0 auto; /* Автоматическое выравнивание по центру */
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-bottom-left-radius: 10px; /* Закругление левого нижнего угла */
+    border-bottom-right-radius: 10px; /* Закругление правого нижнего угла */
+    margin-top: 0; /* Убираем отступ от верхней части страницы */
+}
+
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Стили для заголовка и описания контента */
+.content {
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 18px;
+}
+
+/* Стили для формы ввода */
+input[type="number"] {
+    padding: 8px 12px;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+label {
+    font-size: 18px;
+    color: #fff;
+    margin-right: 10px;
+}
+
+/* Стили для кнопки запуска */
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+.content .title {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.content .description {
+    font-size: 24px;
+}
+
+.logo-image {
+    width: 50px;
+    height: 50px;
+}
+
+#result-container {
+    width: 30%; /* Ширина контейнера с результатами */
+    margin: 0 auto; /* Автоматическое выравнивание по центру */
+    background-color: #f0f0f0; /* Цвет фона */
+    padding: 20px; /* Внутренний отступ */
+    border: 2px solid #ccc; /* Граница */
+    border-radius: 10px; /* Закругленные углы */
+    margin-top: -150px;
+    color: #333;
+    height: 500px; /* Пример высоты */
+}
+
+
+#result-container p {
+    margin: 10px 0; /* Отступы сверху и снизу для абзацев */
+    color: #333; /* Цвет текста */
+}
+
+#result-container ul {
+    margin: 10px 0; /* Отступы сверху и снизу для списка */
+}
+
+#result-container li {
+    margin: 5px 0; /* Отступы сверху и снизу для элементов списка */
+    color: #555; /* Цвет текста элементов списка */
+}
+
+#result-container h2 {
+    margin-bottom: 20px; /* Отступ снизу для заголовка */
+    color: #000; /* Цвет текста заголовка */
+}
+ /* Стиль для самого модального окна */
+.modal {
+    display: none; /* Скрываем модальное окно по умолчанию */
+    position: fixed; /* Фиксируем позицию */
+    z-index: 1; /* Отображать над другими элементами */
+    left: 0;
+    top: 0;
+    width: 100%; /* Занимать всю ширину */
+    height: 100%; /* Занимать всю высоту */
+    overflow: auto; /* Добавить скролл, если нужно */
+    background-color: rgba(0, 0, 0, 0.4); /* Затемнение фона */
+}
+
+/* Стиль для внутренней части модального окна */
+.modal-content {
+    background-color: white; /* Белый фон */
+    margin: 15% auto; /* Центрирование */
+    padding: 30px; /* Отступы внутри */
+    border-radius: 10px; /* Скругленные углы */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Тень */
+    width: 30%; /* Ширина модального окна */
+}
+
+/* Стиль для кнопки закрытия */
+.close {
+    color: #842c2c; /* Цвет */
+    float: right; /* Выравнивание по правой стороне */
+    font-size: 28px; /* Размер шрифта */
+    font-weight: bold; /* Жирный шрифт */
+}
+
+.close:hover,
+.close:focus {
+    color: black; /* Цвет при наведении и фокусе */
+    text-decoration: none; /* Без подчеркивания */
+    cursor: pointer; /* Указатель мыши */
+}
+
+/* Стили для формы внутри модального окна */
+form {
+    display: flex; /* Используем flexbox */
+    flex-direction: column; /* Колонки */
+}
+
+/* Стиль для подписи */
+label {
+    font-size: 16px; /* Размер шрифта */
+    font-weight: bold; /* Жирный шрифт */
+    color: #333; /* Цвет текста */
+    margin-bottom: 5px; /* Отступ снизу */
+}
+
+/* Стиль для элементов ввода */
+input {
+    padding: 10px; /* Отступ внутри */
+    border: 1px solid #ccc; /* Граница */
+    border-radius: 5px; /* Скругленные углы */
+    font-size: 14px; /* Размер шрифта */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="button"],
+input[type="submit"] {
+    padding: 10px; /* Отступы внутри */
+    margin-bottom: 10px; /* Отступ снизу */
+    border: 1px solid #ccc; /* Граница */
+    border-radius: 5px; /* Скругленные углы */
+}
+
+input[type="button"],
+input[type="submit"] {
+    background-color: #4CAF50; /* Зеленый фон */
+    color: white; /* Белый текст */
+    cursor: pointer; /* Указатель мыши */
+}
+
+input[type="button"]:hover,
+input[type="submit"]:hover {
+    background-color: #45a049; /* Более темный зеленый при наведении */
+}
